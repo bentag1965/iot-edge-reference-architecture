@@ -1,0 +1,12 @@
+{
+  "metrics": [
+    {"name":"edge_observations_total","type":"counter","description":"Raw radio observations received by gateway."},
+    {"name":"edge_events_accepted_total","type":"counter","description":"Qualified events accepted for persistence."},
+    {"name":"edge_duplicates_suppressed_total","type":"counter","description":"Duplicate observations suppressed locally."},
+    {"name":"edge_queue_depth","type":"gauge","description":"Pending unsynchronized event count."},
+    {"name":"edge_oldest_pending_age_seconds","type":"gauge","description":"Age of oldest pending event."},
+    {"name":"edge_sync_failures_total","type":"counter","description":"Cloud synchronization failures."},
+    {"name":"edge_storage_utilization_ratio","type":"gauge","description":"Local durable storage utilization."},
+    {"name":"edge_gateway_uptime_seconds","type":"gauge","description":"Gateway uptime."}
+  ]
+}
