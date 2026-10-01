@@ -1,0 +1,14 @@
+{
+  "eventId": "evt-01JEDGEEXAMPLE",
+  "eventType": "device.presence",
+  "deviceIdentity": "asset-demo-1042",
+  "gatewayId": "gateway-demo-01",
+  "occurredAt": "2026-10-01T12:00:00Z",
+  "observations": 4,
+  "signal": {
+    "averageRssi": -64.5,
+    "minimumRssi": -69,
+    "maximumRssi": -61
+  },
+  "syncStatus": "pending"
+}
