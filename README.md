@@ -120,3 +120,10 @@ This repository is intentionally generic. It contains no former-employer source 
 ## Validation
 
 GitHub Actions runs behavioral tests for event deduplication and store-and-forward acknowledgement handling, followed by strict TypeScript type-checking.
+
+## Operations Deep Dive
+
+- [Observability and service signals](docs/observability.md)
+- [Incident runbook](docs/runbook.md)
+- [Example incident scenario](docs/incident-scenario.md)
+- [Metrics catalog](examples/metrics-catalog.json)
