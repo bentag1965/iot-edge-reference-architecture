@@ -110,3 +110,13 @@ This repository is intentionally generic. It contains no former-employer source 
 - Device provisioning lifecycle
 - Firmware version inventory
 - Edge security model
+
+## Architecture Deep Dive
+
+- [Case study](docs/case-study.md)
+- [Architecture decisions](docs/adr/README.md)
+- [Reliability and recovery](docs/reliability-recovery.md)
+
+## Validation
+
+GitHub Actions runs behavioral tests for event deduplication and store-and-forward acknowledgement handling, followed by strict TypeScript type-checking.
