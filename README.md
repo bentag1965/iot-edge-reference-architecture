@@ -2,6 +2,18 @@
 
 A public reference architecture for resilient connected-device systems operating across BLE, RFID/UHF, NFC, Wi-Fi, cellular, and intermittently connected edge environments.
 
+## Executive Lens
+
+IoT reliability is an operations problem as much as a device problem. This architecture is built around the realities that field systems lose connectivity, radio observations are noisy, power is imperfect, and hardware must remain supportable after the original engineer leaves the project.
+
+**Leadership questions this design addresses:**
+
+- What continues to work when the WAN disappears?
+- How do we prevent noisy radio data from becoming noisy business events?
+- How do we identify, monitor, and recover devices across changing field conditions?
+- Which responsibilities belong at the edge and which belong in the cloud?
+- What information must survive handoff from engineering to deployment and support?
+
 This project focuses on the practical engineering problems that appear after the whiteboard: duplicate detections, weak signals, intermittent backhaul, local buffering, device identity, power loss, and reliable cloud synchronization.
 
 ## What This Project Demonstrates
@@ -99,6 +111,17 @@ iot-edge-reference-architecture/
 ## Production vs. Public Reference
 
 This repository is intentionally generic. It contains no former-employer source code, customer data, proprietary device configuration, internal network details, private firmware, or production credentials.
+
+## Tradeoffs and Decisions
+
+- **Edge filtering before cloud ingestion:** reduces noise and bandwidth, but requires enough local intelligence to make trustworthy decisions.
+- **Durable local buffering:** improves resilience during outages, while introducing queue management and replay considerations.
+- **Replaceable backhaul:** keeps cellular, Wi-Fi, Ethernet, or satellite from becoming architectural dependencies, at the cost of an abstraction layer that must be maintained.
+- **Stable logical device identity:** avoids tying operations to transient network addresses, but requires disciplined provisioning and inventory management.
+
+## What I Would Improve Next
+
+The next layer would be a stronger device-lifecycle model: provisioning, firmware/version inventory, gateway health scoring, connectivity failover policy, MQTT transport, local SQLite persistence, replay tooling, and an explicit edge-security model. Operationally, I would also connect device health and deployment state to support workflows so field telemetry becomes actionable service data.
 
 ## Planned Enhancements
 
